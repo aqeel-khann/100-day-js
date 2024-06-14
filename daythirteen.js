@@ -5,22 +5,20 @@ function countVowels(str) {
    if (str.length === 0) {
      console.log("pass the value");
    } else {
-       str.toLowerCase()
-       let newStr = str.split("");
+       str=str.toLowerCase()
        let arr = ["a", "e", "i", "o", "u"];
-       for (let i = 0; i < arr.length; i++) {
+       for (let i = 0; i < str.length; i++) {
            
-           if (arr[i].includes(newStr)) {
-               count++
-        
-       }
-       }
+            if (arr.includes(str[i])) {
+                count=count+1
+            }
+    }
      
     }
-    
     return count
-
 }
 
-console.log(countVowels("hello world"));
+console.log(countVowels("hello world")); //3
+console.log(countVowels("adnan")); //2
+
 // console.log(countVowels(""));
